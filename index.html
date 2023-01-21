@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_89f47d364dc47aef0bd578a93f28eaff {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_89f47d364dc47aef0bd578a93f28eaff" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_89f47d364dc47aef0bd578a93f28eaff = L.map(
+                "map_89f47d364dc47aef0bd578a93f28eaff",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2f41c1978971b09d9177f81fee75058f = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            map_89f47d364dc47aef0bd578a93f28eaff.fitBounds(
+                [[43.35352393059828, -1.7775362921887825], [43.37985851152224, -1.7339564612335614]],
+                {}
+            );
+        
+    
+            var tile_layer_dc2d949dbf8291877e436e58371611ab = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_adcddf37d86d287ba8a167c89bca8975 = new L.Control.MiniMap(
+                tile_layer_dc2d949dbf8291877e436e58371611ab,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_89f47d364dc47aef0bd578a93f28eaff.addControl(mini_map_adcddf37d86d287ba8a167c89bca8975);
+        
+    
+            var marker_7f1a63f4e730f88b2a73c8fe9ac20315 = L.marker(
+                [43.3725945806215, -1.74734966325229],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_0a44dbfce60a11a2bce8ce5463b8e507 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7f1a63f4e730f88b2a73c8fe9ac20315.setIcon(icon_0a44dbfce60a11a2bce8ce5463b8e507);
+        
+    
+        var popup_676920d440a5122e599e3580f0f75eb4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af6408ebc036297db6fd1c6c1ee404b8 = $(`<div id="html_af6408ebc036297db6fd1c6c1ee404b8" style="width: 100.0%; height: 100.0%;">id <b>1</b> <br><b>Agerria</b> <br>data: <b>1598</b><br>auzoa Zubernoa <br>zonaldea  <br>adresse_postale 23 Rue de la Glacière <br>usage Restaurante <br>etat Bien restaurada<br> </div>`)[0];
+            popup_676920d440a5122e599e3580f0f75eb4.setContent(html_af6408ebc036297db6fd1c6c1ee404b8);
+        
+
+        marker_7f1a63f4e730f88b2a73c8fe9ac20315.bindPopup(popup_676920d440a5122e599e3580f0f75eb4)
+        ;
+
+        
+    
+    
+            var marker_1624d31c8db8d773e3925fae22b5e140 = L.marker(
+                [43.35375302515965, -1.7775362921887825],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_7743d8e92e78dda6c1a77cf835e65c5f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1624d31c8db8d773e3925fae22b5e140.setIcon(icon_7743d8e92e78dda6c1a77cf835e65c5f);
+        
+    
+        var popup_dab15260bbc3a3a1bde24332b39a9a8f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_99cec7f0a9975ea056d6f2bc77cd8218 = $(`<div id="html_99cec7f0a9975ea056d6f2bc77cd8218" style="width: 100.0%; height: 100.0%;">id <b>2</b> <br><b>Agorreta</b> <br>data: <b>1568</b><br>auzoa Zubernoa <br>zonaldea  <br>adresse_postale Nº  de ? <br>usage  <br>etat <br> en uso</div>`)[0];
+            popup_dab15260bbc3a3a1bde24332b39a9a8f.setContent(html_99cec7f0a9975ea056d6f2bc77cd8218);
+        
+
+        marker_1624d31c8db8d773e3925fae22b5e140.bindPopup(popup_dab15260bbc3a3a1bde24332b39a9a8f)
+        ;
+
+        
+    
+    
+            var marker_e13a3f59a82f87c8262115efedd5056a = L.marker(
+                [43.377470837762296, -1.749542298493435],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_b4e76427173b72ff51cf452915b647c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e13a3f59a82f87c8262115efedd5056a.setIcon(icon_b4e76427173b72ff51cf452915b647c4);
+        
+    
+        var popup_e66f9b9ac301c4e3026fb21529bdb422 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_039861e11c265ad15274769620373988 = $(`<div id="html_039861e11c265ad15274769620373988" style="width: 100.0%; height: 100.0%;">id <b>7</b> <br><b>Aragorri </b> <br>data: <b>1598 ?</b><br>auzoa  <br>zonaldea  <br>adresse_postale  (precisar) <br>usage  <br>etat <br> </div>`)[0];
+            popup_e66f9b9ac301c4e3026fb21529bdb422.setContent(html_039861e11c265ad15274769620373988);
+        
+
+        marker_e13a3f59a82f87c8262115efedd5056a.bindPopup(popup_e66f9b9ac301c4e3026fb21529bdb422)
+        ;
+
+        
+    
+    
+            var marker_1495355c1fde6118af2f601abea457b3 = L.marker(
+                [43.37405305374956, -1.7446432207054918],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_f2a0cd91dec998fb0fc5a1142ebb3fa5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1495355c1fde6118af2f601abea457b3.setIcon(icon_f2a0cd91dec998fb0fc5a1142ebb3fa5);
+        
+    
+        var popup_8fb96d2d55df962fc9e156aad7637aad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66ff36a222666e6080ed5b9d020445b5 = $(`<div id="html_66ff36a222666e6080ed5b9d020445b5" style="width: 100.0%; height: 100.0%;">id <b>8</b> <br><b>Azkubia</b> <br>data: <b></b><br>auzoa Zubernoa <br>zonaldea  <br>adresse_postale nº   chemin de Azk-Fagady <br>usage  <br>etat <br> </div>`)[0];
+            popup_8fb96d2d55df962fc9e156aad7637aad.setContent(html_66ff36a222666e6080ed5b9d020445b5);
+        
+
+        marker_1495355c1fde6118af2f601abea457b3.bindPopup(popup_8fb96d2d55df962fc9e156aad7637aad)
+        ;
+
+        
+    
+    
+            var marker_579c483997bc03ece8ad93131d9fb8b9 = L.marker(
+                [43.3775276524071, -1.7388257293410945],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_0e780b2e43aa8256cde9bdf17e246640 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_579c483997bc03ece8ad93131d9fb8b9.setIcon(icon_0e780b2e43aa8256cde9bdf17e246640);
+        
+    
+        var popup_8c19045b4f23733d6be83a5775bab8fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ec7db97a9f0ec9532aececbff0b4ce4 = $(`<div id="html_7ec7db97a9f0ec9532aececbff0b4ce4" style="width: 100.0%; height: 100.0%;">id <b>11</b> <br><b>Azporotsttipi</b> <br>data: <b>1598</b><br>auzoa Zubernoa <br>zonaldea Abbadia <br>adresse_postale Abbadia- Route de la Corniche <br>usage Restaurado <br>etat Maison de la C. basque<br> </div>`)[0];
+            popup_8c19045b4f23733d6be83a5775bab8fe.setContent(html_7ec7db97a9f0ec9532aececbff0b4ce4);
+        
+
+        marker_579c483997bc03ece8ad93131d9fb8b9.bindPopup(popup_8c19045b4f23733d6be83a5775bab8fe)
+        ;
+
+        
+    
+    
+            var marker_ca30d8420320594c31ce66b4e624298b = L.marker(
+                [43.36854257086172, -1.7476635081552412],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_017dab37c7886d4bd580d0b0bb1ff999 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ca30d8420320594c31ce66b4e624298b.setIcon(icon_017dab37c7886d4bd580d0b0bb1ff999);
+        
+    
+        var popup_859f5d0fa0cac3b7ccffe546f2cc7085 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_027300180c1b4ba3fed60e57c856528e = $(`<div id="html_027300180c1b4ba3fed60e57c856528e" style="width: 100.0%; height: 100.0%;">id <b>25</b> <br><b>Dorrondegi</b> <br>data: <b></b><br>auzoa Zubernoa <br>zonaldea  <br>adresse_postale nº Rue Mentaberry.  <br>usage Recep. Camping.Dorrondegi <br>etat Bien rehabilitada<br> en uso</div>`)[0];
+            popup_859f5d0fa0cac3b7ccffe546f2cc7085.setContent(html_027300180c1b4ba3fed60e57c856528e);
+        
+
+        marker_ca30d8420320594c31ce66b4e624298b.bindPopup(popup_859f5d0fa0cac3b7ccffe546f2cc7085)
+        ;
+
+        
+    
+    
+            var marker_f44f77f56f98f95a6b4fea8d66cec313 = L.marker(
+                [43.368277868950976, -1.7465231734554687],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_abe25f32404313b4cd692e1e23a78f39 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f44f77f56f98f95a6b4fea8d66cec313.setIcon(icon_abe25f32404313b4cd692e1e23a78f39);
+        
+    
+        var popup_2acf6feb25ef6dfad4f6fbc926b20504 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_503c41206b00179d67af5e5537f12e32 = $(`<div id="html_503c41206b00179d67af5e5537f12e32" style="width: 100.0%; height: 100.0%;">id <b>26</b> <br><b>Dorrondegiko errota</b> <br>data: <b></b><br>auzoa Zubernoa <br>zonaldea  <br>adresse_postale  <br>usage Camping du Moulin <br>etat Restos<br> </div>`)[0];
+            popup_2acf6feb25ef6dfad4f6fbc926b20504.setContent(html_503c41206b00179d67af5e5537f12e32);
+        
+
+        marker_f44f77f56f98f95a6b4fea8d66cec313.bindPopup(popup_2acf6feb25ef6dfad4f6fbc926b20504)
+        ;
+
+        
+    
+    
+            var marker_036a93727d36a4e99e33f4b66b03f4e7 = L.marker(
+                [43.36016931884815, -1.7594830741461878],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_60869b06fbcde366967af89e9e7d1db9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_036a93727d36a4e99e33f4b66b03f4e7.setIcon(icon_60869b06fbcde366967af89e9e7d1db9);
+        
+    
+        var popup_da321d7673dd337933c46756005c40a8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5495203c7309b46a9c8ec58d102e4421 = $(`<div id="html_5495203c7309b46a9c8ec58d102e4421" style="width: 100.0%; height: 100.0%;">id <b>28</b> <br><b>Errondenia</b> <br>data: <b>1703</b><br>auzoa  <br>zonaldea  <br>adresse_postale nº   Rue Pausoa <br>usage  <br>etat En usoi<br> </div>`)[0];
+            popup_da321d7673dd337933c46756005c40a8.setContent(html_5495203c7309b46a9c8ec58d102e4421);
+        
+
+        marker_036a93727d36a4e99e33f4b66b03f4e7.bindPopup(popup_da321d7673dd337933c46756005c40a8)
+        ;
+
+        
+    
+    
+            var marker_f4b5fbfceda7cd144a749ffa36ee9850 = L.marker(
+                [43.36016931884815, -1.7594830741461878],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_1af297be6cf5abad7312ef868ccd9db3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f4b5fbfceda7cd144a749ffa36ee9850.setIcon(icon_1af297be6cf5abad7312ef868ccd9db3);
+        
+    
+        var popup_bd7f5b7ca21f43c95e424801c4ffeb91 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_268b2f3d9e1b0865b0b4d41ea7231c38 = $(`<div id="html_268b2f3d9e1b0865b0b4d41ea7231c38" style="width: 100.0%; height: 100.0%;">id <b>31</b> <br><b>Fagadiko errota</b> <br>data: <b></b><br>auzoa Zubernoa <br>zonaldea  <br>adresse_postale precisar <br>usage en el  Camping : NO SE VE!! <br>etat <br> </div>`)[0];
+            popup_bd7f5b7ca21f43c95e424801c4ffeb91.setContent(html_268b2f3d9e1b0865b0b4d41ea7231c38);
+        
+
+        marker_f4b5fbfceda7cd144a749ffa36ee9850.bindPopup(popup_bd7f5b7ca21f43c95e424801c4ffeb91)
+        ;
+
+        
+    
+    
+            var marker_b60a4ee6807d0d3f6cb88c1092e8c6b4 = L.marker(
+                [43.36016931884815, -1.7594830741461878],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_5f72054f70cc17aa25f98b2a7017136d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b60a4ee6807d0d3f6cb88c1092e8c6b4.setIcon(icon_5f72054f70cc17aa25f98b2a7017136d);
+        
+    
+        var popup_d0a72988b360eb2b679308916331eabc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b834524e5b881ef70daede18844caaa = $(`<div id="html_1b834524e5b881ef70daede18844caaa" style="width: 100.0%; height: 100.0%;">id <b>32</b> <br><b>Galbarreta</b> <br>data: <b></b><br>auzoa Zubernoa <br>zonaldea  <br>adresse_postale  <br>usage Colonia Azureva <br>etat <br> en uso</div>`)[0];
+            popup_d0a72988b360eb2b679308916331eabc.setContent(html_1b834524e5b881ef70daede18844caaa);
+        
+
+        marker_b60a4ee6807d0d3f6cb88c1092e8c6b4.bindPopup(popup_d0a72988b360eb2b679308916331eabc)
+        ;
+
+        
+    
+    
+            var marker_eb82459eb7022bf864406bb591853054 = L.marker(
+                [43.36909455492477, -1.7613002669541824],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_0a7ab28997602eed7c7d7ae8ca43eaf6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_eb82459eb7022bf864406bb591853054.setIcon(icon_0a7ab28997602eed7c7d7ae8ca43eaf6);
+        
+    
+        var popup_2e5c820b1aecbdcc4ce4d5821bb646cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c317db9bf833747b5de13ca29f35c56f = $(`<div id="html_c317db9bf833747b5de13ca29f35c56f" style="width: 100.0%; height: 100.0%;">id <b>34</b> <br><b>Goiara</b> <br>data: <b>1598</b><br>auzoa  <br>zonaldea  <br>adresse_postale 17 Rue Goyara <br>usage  <br>etat Modif.y rehabilitada<br> en uso</div>`)[0];
+            popup_2e5c820b1aecbdcc4ce4d5821bb646cd.setContent(html_c317db9bf833747b5de13ca29f35c56f);
+        
+
+        marker_eb82459eb7022bf864406bb591853054.bindPopup(popup_2e5c820b1aecbdcc4ce4d5821bb646cd)
+        ;
+
+        
+    
+    
+            var marker_caae1f9f7351e0edf7d84d121e3e6296 = L.marker(
+                [43.37900073739309, -1.7339564612335614],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_2ece1a805bdf5dffff76f1f8b7d9ee85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_caae1f9f7351e0edf7d84d121e3e6296.setIcon(icon_2ece1a805bdf5dffff76f1f8b7d9ee85);
+        
+    
+        var popup_b6d08ee36f2fc5fbfb2904832d864342 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_81df1f21b0ac08f98fce9434db57fab5 = $(`<div id="html_81df1f21b0ac08f98fce9434db57fab5" style="width: 100.0%; height: 100.0%;">id <b>35</b> <br><b>Haizabia</b> <br>data: <b>1691</b><br>auzoa Zubernoa <br>zonaldea Abbadia <br>adresse_postale Route de la Corrniche <br>usage  <br>etat <br> </div>`)[0];
+            popup_b6d08ee36f2fc5fbfb2904832d864342.setContent(html_81df1f21b0ac08f98fce9434db57fab5);
+        
+
+        marker_caae1f9f7351e0edf7d84d121e3e6296.bindPopup(popup_b6d08ee36f2fc5fbfb2904832d864342)
+        ;
+
+        
+    
+    
+            var marker_465e68e60b16fff048be504a7b877148 = L.marker(
+                [43.37985851152224, -1.7340744784879825],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_1f84c3d3034d84e21d9a702f740f0aa6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_465e68e60b16fff048be504a7b877148.setIcon(icon_1f84c3d3034d84e21d9a702f740f0aa6);
+        
+    
+        var popup_541e39bc0e81bed7fe7f757461878298 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d35fbdb63d302cd6a3667be39ae53cc = $(`<div id="html_7d35fbdb63d302cd6a3667be39ae53cc" style="width: 100.0%; height: 100.0%;">id <b>36</b> <br><b>Haizabiako errota</b> <br>data: <b></b><br>auzoa Zubernoa <br>zonaldea Abbadia <br>adresse_postale Route de la Corrniche <br>usage  <br>etat ni resto; canal?<br> </div>`)[0];
+            popup_541e39bc0e81bed7fe7f757461878298.setContent(html_7d35fbdb63d302cd6a3667be39ae53cc);
+        
+
+        marker_465e68e60b16fff048be504a7b877148.bindPopup(popup_541e39bc0e81bed7fe7f757461878298)
+        ;
+
+        
+    
+    
+            var marker_264f8f6c9b0e85af88392e6d36f06ebc = L.marker(
+                [43.35352393059828, -1.774691026287342],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_126161cb9a1240de6c94ac8f38b54c46 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_264f8f6c9b0e85af88392e6d36f06ebc.setIcon(icon_126161cb9a1240de6c94ac8f38b54c46);
+        
+    
+        var popup_9515fa34400e7fa2cf8424f35b8dbfdc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_22908b2b6c3655b4475e9d45029c90e1 = $(`<div id="html_22908b2b6c3655b4475e9d45029c90e1" style="width: 100.0%; height: 100.0%;">id <b>39</b> <br><b>Irandatz</b> <br>data: <b>1149/1598</b><br>auzoa  <br>zonaldea  <br>adresse_postale 6 Rue de Irandatz <br>usage  <br>etat Ultimos restos de<br> </div>`)[0];
+            popup_9515fa34400e7fa2cf8424f35b8dbfdc.setContent(html_22908b2b6c3655b4475e9d45029c90e1);
+        
+
+        marker_264f8f6c9b0e85af88392e6d36f06ebc.bindPopup(popup_9515fa34400e7fa2cf8424f35b8dbfdc)
+        ;
+
+        
+    
+    
+            var marker_9b74d18eb9fb1e4486b4cca529b0d0e7 = L.marker(
+                [43.37756137026865, -1.7451190704055533],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_24820be3a0cf0bb95b1979ca543cdb5b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9b74d18eb9fb1e4486b4cca529b0d0e7.setIcon(icon_24820be3a0cf0bb95b1979ca543cdb5b);
+        
+    
+        var popup_e2c8fa9e30fc1cea3da2bdf0b36be0d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b35736ef0d945eba83f0ac7328e64a71 = $(`<div id="html_b35736ef0d945eba83f0ac7328e64a71" style="width: 100.0%; height: 100.0%;">id <b>42</b> <br><b>Katalinkoenia</b> <br>data: <b></b><br>auzoa Zubernoa <br>zonaldea Abbadia <br>adresse_postale Route de la corniche <br>usage  <br>etat rehabilitada<br> en uso?</div>`)[0];
+            popup_e2c8fa9e30fc1cea3da2bdf0b36be0d1.setContent(html_b35736ef0d945eba83f0ac7328e64a71);
+        
+
+        marker_9b74d18eb9fb1e4486b4cca529b0d0e7.bindPopup(popup_e2c8fa9e30fc1cea3da2bdf0b36be0d1)
+        ;
+
+        
+    
+    
+            var marker_c7a624f6595116f49629d09425b31153 = L.marker(
+                [43.368277868950976, -1.7465231734554687],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_18d62a249ceccad9e2453f7f2af1bca4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c7a624f6595116f49629d09425b31153.setIcon(icon_18d62a249ceccad9e2453f7f2af1bca4);
+        
+    
+        var popup_42e3df372805c361b3cab2f5874c89ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a3c77e4edf46f5bea2880547c628c0f = $(`<div id="html_4a3c77e4edf46f5bea2880547c628c0f" style="width: 100.0%; height: 100.0%;">id <b>62</b> <br><b>Olhaso</b> <br>data: <b>1598</b><br>auzoa Zubernoa <br>zonaldea  <br>adresse_postale 6 Rue des Reservoirs <br>usage Bien rehabilitada <br>etat <br> </div>`)[0];
+            popup_42e3df372805c361b3cab2f5874c89ff.setContent(html_4a3c77e4edf46f5bea2880547c628c0f);
+        
+
+        marker_c7a624f6595116f49629d09425b31153.bindPopup(popup_42e3df372805c361b3cab2f5874c89ff)
+        ;
+
+        
+    
+    
+            var marker_dc97cc1d7b36e03296a66629d59e9127 = L.marker(
+                [43.37079087056213, -1.7465694845915385],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_4f7b4588e50b254c3eb8b5a31bacae81 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_dc97cc1d7b36e03296a66629d59e9127.setIcon(icon_4f7b4588e50b254c3eb8b5a31bacae81);
+        
+    
+        var popup_487fdd11f3c1f13fc049c057be3324a8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cffefa66e21451230efd88d3b18c1bd7 = $(`<div id="html_cffefa66e21451230efd88d3b18c1bd7" style="width: 100.0%; height: 100.0%;">id <b>75</b> <br><b>Sendotegi</b> <br>data: <b>1598</b><br>auzoa Zubernoa <br>zonaldea  <br>adresse_postale nº  Rue de la Glacière <br>usage Recep.Camping Les Acacias <br>etat Bien rehabilitada<br> </div>`)[0];
+            popup_487fdd11f3c1f13fc049c057be3324a8.setContent(html_cffefa66e21451230efd88d3b18c1bd7);
+        
+
+        marker_dc97cc1d7b36e03296a66629d59e9127.bindPopup(popup_487fdd11f3c1f13fc049c057be3324a8)
+        ;
+
+        
+    
+    
+            var marker_02c379b4825e326ae12900a201d28a59 = L.marker(
+                [43.35995758003534, -1.763403461314916],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_6db3653085ae2f2080bc7b7c4ee04b3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_02c379b4825e326ae12900a201d28a59.setIcon(icon_6db3653085ae2f2080bc7b7c4ee04b3d);
+        
+    
+        var popup_4b1c6a405b95cbed50ccd28923d86603 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_31c5d65243b68f9701d1f35d4d0bf16f = $(`<div id="html_31c5d65243b68f9701d1f35d4d0bf16f" style="width: 100.0%; height: 100.0%;">id <b>77</b> <br><b>Teileria</b> <br>data: <b></b><br>auzoa  <br>zonaldea  <br>adresse_postale nº Boulevard de l'Empereur <br>usage placa: Argiñenia 1834 ! <br>etat Ruisseau Argiñenia en Tracé…<br> </div>`)[0];
+            popup_4b1c6a405b95cbed50ccd28923d86603.setContent(html_31c5d65243b68f9701d1f35d4d0bf16f);
+        
+
+        marker_02c379b4825e326ae12900a201d28a59.bindPopup(popup_4b1c6a405b95cbed50ccd28923d86603)
+        ;
+
+        
+    
+    
+            var marker_0e23255debdb40d488ee6c5784b634ba = L.marker(
+                [43.36960520000001, -1.752381527475752],
+                {}
+            ).addTo(map_89f47d364dc47aef0bd578a93f28eaff);
+        
+    
+            var icon_c91344dd1401a4ff886034ac4f400084 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0e23255debdb40d488ee6c5784b634ba.setIcon(icon_c91344dd1401a4ff886034ac4f400084);
+        
+    
+        var popup_ec3a6e2dc5bcfcf2fff0c8cdaa054da1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4deb2e0d4f557009c8471c61bba1db24 = $(`<div id="html_4deb2e0d4f557009c8471c61bba1db24" style="width: 100.0%; height: 100.0%;">id <b>82</b> <br><b>Zopite</b> <br>data: <b>1568</b><br>auzoa Zubernoa <br>zonaldea  <br>adresse_postale nº14 Chemin de Zopite <br>usage bien restaurado <br>etat conserva la forma<br> en uso</div>`)[0];
+            popup_ec3a6e2dc5bcfcf2fff0c8cdaa054da1.setContent(html_4deb2e0d4f557009c8471c61bba1db24);
+        
+
+        marker_0e23255debdb40d488ee6c5784b634ba.bindPopup(popup_ec3a6e2dc5bcfcf2fff0c8cdaa054da1)
+        ;
+
+        
+    
+</script>
+</html>
